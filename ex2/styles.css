@@ -1,0 +1,51 @@
+body{
+    background-image: url('Images/Background.jpg');
+    background-size: cover;
+    background-position-y: 20% ;    
+}
+.hero {
+    text-align: center;
+}
+.subhead {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: black;
+    letter-spacing: .3em;
+}
+h1 {
+    color: rgb(73, 209, 214);
+    font-size: 2.5em;
+    line-height: 1.3em;
+    margin-top: .2em;
+}
+
+li {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    margin-left: 2em;
+    color: aliceblue;
+    position: relative;
+}
+
+li::before {
+    content: '';
+    left: -2em;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('Images/paw.svg');
+    background-size: contain;
+    margin-right: .5em;
+}
+
+.question {
+    font-size: 1.1em;
+    color: aliceblue;
+}
+.ending {
+    font-size: 1.1em;
+    color: aliceblue;
+}
+a {
+    color: crimson;
+}
