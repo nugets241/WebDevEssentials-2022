@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Current Time</title>
+</head>
+<body onload=display_ct();>
+
+    <span id="current-time"></span>
+
+    <script>
+        function display_ct(){
+            
+            let date = new Date();
+
+            let h = date.getHours();
+            let m = String(date.getMinutes()).padStart(2, '0');
+            let s = (date.getSeconds()<10?'0':'') + date.getSeconds();
+
+            let time = h + ':' + m + ':' + s;
+
+            document.getElementById('current-time').innerHTML=time;
+
+            backgroundColor (s);
+            update_display();
+        }
+
+        function update_display(){
+            let refresh = 1000;
+            setTimeout('display_ct()', refresh)
+        }
+
+        function backgroundColor(s) {
+            let b = document.getElementById('current-time');
+
+            if (s % 2 == 0){
+                b.style.backgroundColor = '#deb887';
+            }
+            else{
+                b.style.backgroundColor = '#5f9ea0';
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+body{
+    font-family: serif;
+    background-color:rgb(34, 37, 37);
+}
+
+.tabContainer{
+    width: 100%;
+    height: 350px;
+}
+
+.tabContainer .buttonContainer{
+    height: 35%;
+}
+
+#tab1{
+    background-color:lightseagreen;
+}
+
+#tab2{
+    color:azure;
+    background-color: darkslategray;
+}
+
+.tabContainer .buttonContainer button{
+    width: 50%;
+    height: 100%;
+    float: left;
+    border: none;
+    outline: none;
+    font-size: 50px;
+    font: bold;
+    font-family: serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+.tabContainer .tabPanel{
+    box-sizing: border-box;
+    padding: 20px;
+    height: 70%;
+    font-family: serif;
+    display: none;
+}
