@@ -1,8 +1,8 @@
 function task1(){
 
     //Draw random number from 1-10
-    var randomNum1 = Math.ceil(Math.random()*10);
-    var randomNum2 = Math.ceil(Math.random()*10);
+    var randomNum1 = Math.floor(Math.random()*10+1);
+    var randomNum2 = Math.floor(Math.random()*10+1);
 
     //Display the numbers
     if(randomNum1 < randomNum2){
@@ -27,7 +27,7 @@ function task2(min, max){
     for (var i = min; i <= max; i++){
 
         if (i % 2 == 0){
-            myArray.push(i);
+            console.log(i);
         }
 
     }
@@ -36,7 +36,7 @@ function task2(min, max){
     for(var i = min; i <= max; i++){
 
         if (i % 2 != 0){
-            myArray.push(i);
+            console.log(i);
         }
 
     }
