@@ -18,14 +18,16 @@
      for(let i=0; i < l; i++){
          const dataObject = dataObjects[i];
 
-         const points = (`${dataObject.exercise_points}` === "null") ? `&ndash;` : `${dataObject.exercise_points}`;
+         const points = (`${dataObject.exercise_points}` === "" || `${dataObject.exercise_points}`==="null") ? `&ndash;` : `${dataObject.exercise_points}`;
+         const name = (`${dataObject.name}`==="")? "Student " + (i+1): `${dataObject.name}`;
+         const info = (`${dataObject.info}`==="")? "No info.": `${dataObject.info}`;
 
-         const bc = (points>50)?"#2ea9b0":"#de789a";
+         const bc = (points>=50)?"#2ea9b0":"#de789a";
          
          html += `
                 <tr style="background-color: ` + bc + `">
-                    <td id="ni">${dataObject.name}</td>
-                    <td id="ni">${dataObject.info}</td>
+                    <td id="ni">` + name + `</td>
+                    <td id="ni">` + info + `</td>
                     <td id="points">` + points + `</td>
                 </tr>
                 `
@@ -52,4 +54,8 @@
      }
 
      xhr.send();
+ }
+
+ function updateData(){
+    setTimeout('getData()', 100);
  }
