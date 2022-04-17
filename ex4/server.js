@@ -82,6 +82,10 @@ app.get('/html/:id', (req, res) => {
   let objKeys = Object.keys(obj)
   let request = `${req.params.id}`;
 
+  console.log(obj)
+  console.log(objKeys)
+  console.log(obj[objKeys])
+
   res.setHeader("Content-Type", "text/html")
   res.send(`
   <!DOCTYPE html>
